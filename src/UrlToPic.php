@@ -25,7 +25,7 @@ class UrlToPic extends HttpClient
     /**
      * @var string
      */
-    protected $baseUri = 'http://url2pic.php127.com/api/';
+    protected $baseUri = 'https://url2pic.php127.com/api/';
 
     /**
      * @var string
@@ -82,6 +82,7 @@ class UrlToPic extends HttpClient
         ];
         $contents = $this->post('url2pic', $data);
 
+        var_dump($contents);
         return $this->response($contents);
     }
 
